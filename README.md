@@ -1,5 +1,5 @@
-# Real-Project-1-Teach-Eich
-https://hooliaah.github.io/Real-Project-1-Teach-Eich/
+# Project-1-Team-Eich
+https://hooliaah.github.io/Project-1-Team-Eich/
 
 # Team Members 
 Yen Chiu<br />

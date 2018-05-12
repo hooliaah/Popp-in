@@ -1,4 +1,5 @@
 # Project-1-Team-Eich
+A web app to help you get around a new city and chat with locals. Get the weather forecast, local sports news, and Google Maps all if one place. Time to get Popp'in!
 https://hooliaah.github.io/Project-1-Team-Eich/
 
 # Team Members 

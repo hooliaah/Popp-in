@@ -2,7 +2,7 @@
 function searchNews(city, state) {
     var url = 'https://newsapi.org/v2/everything?' +
         'domains=espn.com,si.com&' +
-        'from=2018-12-01' +
+        'from=2018-08-01&to=2018-08-30' +
         'sortBy=popularity&' +
         'q=' + 'teams ' + city + '&' +
         'apiKey=315c46529d14462bada6f13c7af58332';

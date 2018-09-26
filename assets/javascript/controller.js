@@ -1,3 +1,4 @@
+// GLOBAL VARIABLE
 var loc;
 
 // search for city, return lat and long (used in maps.js and weather.js) + city name (used in sports.js)
@@ -9,10 +10,12 @@ $("#submit").on("click", function (e) {
         // google geocode api is used for converting addresses
         // encodeURIComponent means it takes out any special characters
         $.getJSON("https://maps.googleapis.com/maps/api/geocode/json?address=" + encodeURIComponent(city), function (val) {
+            console.log(val);
             if (val.results.length) {
                 loc = val.results[0].geometry.location
                 weather();
                 initMap();
+                console.log("weather and map called");
             }
             var location = $("#search").val().trim();
             searchNews(location);

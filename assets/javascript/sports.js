@@ -2,10 +2,11 @@
 function searchNews(city, state) {
     var url = 'https://newsapi.org/v2/everything?' +
         'domains=espn.com,si.com&' +
-        'from=2018-08-01&to=2018-08-30' +
+        // need to add date calculations here so date isn't hard coded
+        'from=2018-09-15&to=2018-09-25' +
         'sortBy=popularity&' +
         'q=' + 'teams ' + city + '&' +
-        'apiKey=315c46529d14462bada6f13c7af58332';
+        'apiKey=df46d3a9e0064e7e85beaf63eb6a0d82';
 
     $.ajax({
         url: url,
@@ -19,6 +20,7 @@ function searchNews(city, state) {
 
 // function to display data in HTML
 function pushToDiv(data) {
+    console.log(data);
     $('#sports-div').empty();
     var dataLength = 5;
     if (data.length < 5) {

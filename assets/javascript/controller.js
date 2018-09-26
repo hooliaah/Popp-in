@@ -1,3 +1,4 @@
+// GLOBAL VARIABLE
 var loc;
 
 // search for city, return lat and long (used in maps.js and weather.js) + city name (used in sports.js)

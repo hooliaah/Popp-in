@@ -9,7 +9,7 @@ $("#submit").on("click", function (e) {
         // $.getJSON is a method to get JSON data using an AJAX HTTP GET request
         // google geocode api is used for converting addresses
         // encodeURIComponent means it takes out any special characters
-        $.getJSON("https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyDT0pl0hd2be_OexuR7fo5y2yls9vTpQ9U&address=" + encodeURIComponent(city), function (val) {
+        $.getJSON("https://maps.googleapis.com/maps/api/geocode/json?address=" + encodeURIComponent(city) + "&key=AIzaSyDT0pl0hd2be_OexuR7fo5y2yls9vTpQ9U", function (val) {
             console.log(val);
             if (val.results.length) {
                 loc = val.results[0].geometry.location

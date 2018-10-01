@@ -1,9 +1,27 @@
 // function to search for sports news in selected city
+
+// Global variables to get current date
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1;
+var yyyy = today.getFullYear();
+
+if(dd<10) {
+    dd = '0'+dd
+} 
+
+if(mm<10) {
+    mm = '0'+mm
+} 
+
+today = mm + '-' + dd + '-' + yyyy;
+var lastWeekDay = dd - 7;
+var lastWeek = mm + '-' + lastWeekDay + '-' + yyyy;
+
 function searchNews(city, state) {
     var url = 'https://newsapi.org/v2/everything?' +
         'domains=espn.com,si.com&' +
-        // need to add date calculations here so date isn't hard coded
-        'from=2018-09-15&to=2018-09-25' +
+        'from=' + lastWeek + '&to=' + today +
         'sortBy=popularity&' +
         'q=' + 'teams ' + city + '&' +
         'apiKey=df46d3a9e0064e7e85beaf63eb6a0d82';
